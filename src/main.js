@@ -9,4 +9,4 @@ const CustomElement = wrap(Vue, VueComponent, {
   jsonMapping: true,
 });
 
-window.customElements.define('vue-component', CustomElement);
+window.customElements.define('custom-feedback', CustomElement);
