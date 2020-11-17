@@ -1,8 +1,10 @@
+import '@webcomponents/webcomponentsjs';
 import Vue from 'vue';
-import App from './App.vue';
+import wrap from '@telia/vue-web-component-wrapper-ie11';
+import feedback from './App.vue';
 
-Vue.config.productionTip = false;
+const CustomElement = wrap(Vue, feedback, {
+  globalStyles: false,
+});
 
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+window.customElements.define('custom-feedback', CustomElement);

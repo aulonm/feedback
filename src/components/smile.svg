@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Grafikk">
+      <g opacity="0">
+        <rect fill="#eaeaea" width="32" height="32"/>
+      </g>
+      <circle fill="#43f8b6" stroke="#000" stroke-miterlimit="10" stroke-width="2px" cx="16" cy="16" r="14"/>
+      <path  fill="#43f8b6" stroke="#000" stroke-miterlimit="10" stroke-width="2px" d="M25,15A9,9,0,0,1,7,15"/>
+      <circle cx="12" cy="11" r="2"/>
+      <circle cx="20" cy="11" r="2"/>
+    </g>
+  </g>
+</svg>

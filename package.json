@@ -6,25 +6,40 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lint:style": "stylelint 'src/**/*.scss' 'src/**/*.vue' ",
+    "lint:style:fix": "stylelint 'src/**/*.scss' 'src/**/*.vue' --fix"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "@telia/vue-web-component-wrapper-ie11": "^1.7.3",
+    "@ungap/custom-elements": "^0.1.9",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "axios": "^0.21.0",
+    "core-js": "^3.7.0",
+    "regenerator-runtime": "^0.13.7",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "@vue/test-utils": "^1.0.3",
+    "@vue/cli-plugin-babel": "~4.5.8",
+    "@vue/cli-plugin-eslint": "~4.5.8",
+    "@vue/cli-plugin-unit-jest": "~4.5.8",
+    "@vue/cli-service": "~4.5.8",
+    "@vue/eslint-config-airbnb": "^5.1.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.1.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "eslint": "^7.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.1.0",
+    "prettier": "^2.1.2",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
+    "stylelint": "^13.7.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.12"
   }
 }
