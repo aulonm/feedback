@@ -1,10 +1,12 @@
 import '@webcomponents/webcomponentsjs';
+
 import Vue from 'vue';
 import wrap from '@telia/vue-web-component-wrapper-ie11';
-import feedback from './App.vue';
+import VueComponent from './App.vue';
 
-const CustomElement = wrap(Vue, feedback, {
-  globalStyles: false,
+const CustomElement = wrap(Vue, VueComponent, {
+  globalStyles: true,
+  jsonMapping: true,
 });
 
-window.customElements.define('custom-feedback', CustomElement);
+window.customElements.define('vue-component', CustomElement);
