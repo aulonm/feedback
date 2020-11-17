@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@telia/vue-web-component-wrapper-ie11": "^1.7.3",
-    "@ungap/custom-elements": "^0.1.9",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "axios": "^0.21.0",
     "core-js": "^3.7.0",
