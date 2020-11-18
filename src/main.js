@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import '@webcomponents/webcomponentsjs';
 
 import Vue from 'vue';

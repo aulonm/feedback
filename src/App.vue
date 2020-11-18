@@ -41,6 +41,21 @@
               </div>
             </div>
           </div>
+
+          <template v-if="smiley !== null">
+            <div class="feedbackarea">
+              <textarea :placeholder="getFeedbackQuestionText" v-model="feedback" rows="10" cols="45"> </textarea>
+              <div v-if="feedback.length === 0" class="sendinncontainer">
+                <span class="nocomment">Skriv en kommentar før du sender tilbakemeldingen.</span>
+              </div>
+              <div v-else class="sendinncontainer">
+                <button class="sendinn" :disabled="saving" :class="{ verified: true }" type="submit">Send inn</button>
+              </div>
+              <div v-if="saving" class="sendinncontainer">
+                <span>spinner 4lyfe</span>
+              </div>
+            </div>
+          </template>
         </form>
       </div>
     </div>
@@ -69,6 +84,8 @@ export default {
     label: 'Tilbakemelding',
     isOpen: false,
     smiley: null,
+    feedback: '',
+    saving: false,
   }),
 
   computed: {
@@ -83,6 +100,13 @@ export default {
         return 'Lite fornøyd';
       }
       return '';
+    },
+
+    getFeedbackQuestionText() {
+      if (this.smiley === 3) {
+        return 'Hvorfor er du misfornøyd? Ikke skriv inn informasjon som kan identifisere deg eller andre. Din tilbakemelding er anonym, og vi vil ikke besvare den.';
+      }
+      return 'Har du forslag til forbedringer? Ikke skriv inn informasjon som kan identifisere deg eller andre. Din tilbakemelding er anonym, og vi vil ikke besvare den.';
     },
   },
 
@@ -102,19 +126,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body.custom-feedback-modal-open {
-  /* body overflow is hidden to hide main scrollbar when modal window is open */
-  overflow: hidden;
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-}
+<style lang="scss" scoped>
+@import './styles/_reset.scss';
 
 .custom-feedback-modal {
   /* modal container fixed across whole screen */
