@@ -109,12 +109,19 @@ export default {
   },
 
   methods: {
+    reset() {
+      this.feedback = '';
+      this.saving = false;
+      this.smiley = null;
+    },
+
     openModal() {
       this.isOpen = true;
     },
 
     closeModal() {
       this.isOpen = false;
+      this.reset();
     },
 
     smileyClicked(number) {
@@ -223,9 +230,9 @@ export default {
   &-submit {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
 
     &-empty {
+      padding-top: 20px;
       color: #ff8274;
     }
 

@@ -3,7 +3,7 @@ import '@webcomponents/webcomponentsjs';
 
 import Vue from 'vue';
 import wrap from '@telia/vue-web-component-wrapper-ie11';
-import OKFeedback from './App.vue';
+import OKFeedback from './Feedback.vue';
 
 const CustomElement = wrap(Vue, OKFeedback, {
   globalStyles: true,
