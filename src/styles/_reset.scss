@@ -1,8 +1,6 @@
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
+button {
   font: inherit;
-  border: none;
+  background: none;
+  border: none
 }

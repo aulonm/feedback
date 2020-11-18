@@ -40,14 +40,9 @@ module.exports = {
     extract: false,
   },
   chainWebpack: (config) => {
-    config.devServer.port(8080);
-
-    config.devtool('source-map');
-
-    // to fix monorepo issues
-    config.resolve.symlinks(false);
-
-    enableShadowCss(config);
+    if (process.env.NODE_ENV !== 'development') {
+      enableShadowCss(config);
+    }
 
     const svgRule = config.module.rule('svg');
 

@@ -1,13 +1,8 @@
-import 'regenerator-runtime/runtime';
-import '@webcomponents/webcomponentsjs';
-
 import Vue from 'vue';
-import wrap from '@telia/vue-web-component-wrapper-ie11';
 import VueComponent from './App.vue';
 
-const CustomElement = wrap(Vue, VueComponent, {
-  globalStyles: true,
-  jsonMapping: true,
-});
+Vue.config.productionTip = false;
 
-window.customElements.define('custom-feedback', CustomElement);
+new Vue({
+  render: (h) => h(VueComponent),
+}).$mount('#app');
